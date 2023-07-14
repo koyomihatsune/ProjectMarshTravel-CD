@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: marshtravel-services-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: "use"
+    kubernetes.io/ingress.global-static-ip-name: marshtravel-api
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /auth
+        pathType: Prefix
+        backend:
+          service:
+            name: auth
+            port:
+              number: 3001
+      - path: /destination
+        pathType: Prefix
+        backend:
+          service:
+            name: destination
+            port:
+              number: 3002

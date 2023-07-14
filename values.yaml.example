@@ -1,0 +1,13 @@
+rabbitmq:
+  auth:
+    username: $RABBITMQ_USERNAME
+    password: $RABBITMQ_PASSWORD
+mongodb:
+  auth:
+    username: $MONGODB_USERNAME
+    password: $MONGODB_PASSWORD
+jwtSecret:
+  secretKey: '$JWT_SECRET_KEY'
+  refreshKey: '$JWT_REFRESH_KEY'
+firebase:
+  serviceAccount: '$FIREBASE_SA'

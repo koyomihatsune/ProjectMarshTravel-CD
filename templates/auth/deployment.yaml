@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: auth
+  template:
+    metadata:
+      labels:
+        app: auth
+    spec:
+      imagePullSecrets:
+        - name: marshtravel-ghcr-registry
+      containers:
+        - name: auth
+          image: ghcr.io/marshtravel/marshtravel-auth:lastest
+          ports:
+            - containerPort: 3001
+          env:
+            - name: PORT
+              value: '3001'
+            - name: MONGODB_URI
+              value: mongodb+srv://{{ .Values.mongodb.auth.username }}:{{ .Values.mongodb.auth.password }}@marshtravel.vv5rzyf.mongodb.net/?retryWrites=true&w=majority
+            - name: RABBIT_MQ_URI
+              value: amqp://{{ .Values.rabbitmq.auth.username }}:{{ .Values.rabbitmq.auth.password }}@marshtravel-rabbitmq:5672
+            - name: RABBIT_MQ_AUTH_QUEUE
+              value: auth
+            - name: RABBIT_MQ_DESTINATION_QUEUE
+              value: destination
+            - name: JWT_SECRET_KEY
+              value: {{ .Values.jwtSecret.secretKey }}
+            - name: JWT_REFRESH_KEY
+              value: {{ .Values.jwtSecret.refreshKey }}
+            - name: FIREBASE_SA
+              value: {{ .Values.firebase.serviceAccount }}

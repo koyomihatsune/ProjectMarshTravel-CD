@@ -1,0 +1,9 @@
+dependencies:
+- name: rabbitmq
+  repository: https://charts.bitnami.com/bitnami
+  version: 10.1.8
+- name: ingress-nginx
+  repository: https://kubernetes.github.io/ingress-nginx
+  version: 4.4.2
+digest: sha256:6b01341d102f4c9313511bdcb14873bbe3282f05a9db1ce1a4617905ba607be4
+generated: "2023-07-14T18:17:55.372736+07:00"
