@@ -35,4 +35,4 @@ spec:
             - name: JWT_REFRESH_KEY
               value: {{ .Values.jwtSecret.refreshKey }}
             - name: FIREBASE_SA
-              value: {{ .Values.firebase.serviceAccount }}
+              value: {{ .Values.firebase.serviceAccount | toJson }}
