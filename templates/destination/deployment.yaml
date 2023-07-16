@@ -31,4 +31,4 @@ spec:
             - name: RABBIT_MQ_DESTINATION_QUEUE
               value: destination
             - name: FIREBASE_SA
-              value: {{ .Values.firebase.serviceAccount | toJson }}
+              value: {{ .Values.firebase.serviceAccount | toJson | quote }}

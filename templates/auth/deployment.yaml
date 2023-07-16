@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: auth
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: auth
@@ -35,4 +35,4 @@ spec:
             - name: JWT_REFRESH_KEY
               value: {{ .Values.jwtSecret.refreshKey }}
             - name: FIREBASE_SA
-              value: {{ .Values.firebase.serviceAccount | toJson }}
+              value: {{ .Values.firebase.serviceAccount | toJson | quote }}
