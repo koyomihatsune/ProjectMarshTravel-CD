@@ -26,6 +26,8 @@ spec:
               value: mongodb+srv://{{ .Values.mongodb.auth.username }}:{{ .Values.mongodb.auth.password }}@marshtravel.vv5rzyf.mongodb.net/?retryWrites=true&w=majority
             - name: RABBIT_MQ_URI
               value: amqp://{{ .Values.rabbitmq.auth.username }}:{{ .Values.rabbitmq.auth.password }}@marshtravel-rabbitmq:5672
+            - name: GOOGLE_MAPS_API_KEY
+              value: {{ .Values.googleMapsApiKey | quote }}
             - name: RABBIT_MQ_AUTH_QUEUE
               value: auth
             - name: RABBIT_MQ_DESTINATION_QUEUE
