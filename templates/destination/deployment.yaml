@@ -27,7 +27,7 @@ spec:
             - name: RABBIT_MQ_URI
               value: amqp://{{ .Values.rabbitmq.auth.username }}:{{ .Values.rabbitmq.auth.password }}@marshtravel-rabbitmq:5672
             - name: GOOGLE_MAPS_API_KEY
-              value: {{ .Values.googleMapsApiKey | quote }}
+              value: {{ .Values.googleMapsAPIKey | quote }}
             - name: RABBIT_MQ_AUTH_QUEUE
               value: auth
             - name: RABBIT_MQ_DESTINATION_QUEUE
