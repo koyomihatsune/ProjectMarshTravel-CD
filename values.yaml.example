@@ -9,6 +9,10 @@ mongodb:
 jwtSecret:
   secretKey: '$JWT_SECRET_KEY'
   refreshKey: '$JWT_REFRESH_KEY'
+oauth2:
+  clientIdWeb: '$OAUTH2_CLIENT_ID_WEB'
+  clientIdAndroid: '$OAUTH2_CLIENT_ID_ANDROID'
+  clientIdIos: '$OAUTH2_CLIENT_ID_IOS'
 googleMapsAPIKey: $GOOGLE_MAPS_API_KEY
 firebase:
   serviceAccount: {
