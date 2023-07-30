@@ -37,8 +37,8 @@ spec:
             - name: FIREBASE_SA
               value: {{ .Values.firebase.serviceAccount | toJson | quote }}
             - name: OAUTH2_CLIENT_ID_WEB
-              value: {{ .Values.jwtSecret.oauth2.clientIdWeb }}
+              value: {{ .Values.oauth2.clientIdWeb }}
             - name: OAUTH2_CLIENT_ID_ANDROID
-              value: {{ .Values.jwtSecret.oauth2.clientIdAndroid }}
+              value: {{ .Values.oauth2.clientIdAndroid }}
             - name: OAUTH2_CLIENT_ID_IOS
-              value: {{ .Values.jwtSecret.oauth2.clientIdIos }}
+              value: {{ .Values.oauth2.clientIdIos }}
