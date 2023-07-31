@@ -15,16 +15,4 @@ oauth2:
   clientIdIos: '$OAUTH2_CLIENT_ID_IOS'
 googleMapsAPIKey: $GOOGLE_MAPS_API_KEY
 firebase:
-  serviceAccount: {
-                "type": "service_account",
-                "project_id": "marshtravel-koyo",
-                "private_key_id": "d0457a7305fc9f710573f3b3e1235edf7095ba89",
-                "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC/jYm0N1o0deoR\n9ZFSAuIVx1NYv9RQ6GF4mchxAuBwbASGFtFsEFK9qZf5tl0xLrO5oYgJFZKyR0KH\nRgUf7Byebp7SQavO83UQl5++OUEmeqkkFjd3PnPH/uI4iyGECX0jKMmsrhYIma0l\nDvqQDrELs94P2/jvMOeRJ8F0SYSxKPUgsmWusGOq3VP7al5uvel46eTcyY8lJ0r7\nUbIL6QxsScFrWp1iC3CBOQ/mHJZRSFYR91XTUJpqZEfhWdQZ2DnnkmCNCuvYtOK0\nTLwI9nBKRcJ5H8VziK1dQIXyspufGyLBycffbKLBFD+p20Xt4q65CWgwfVmAFoWE\n2HVahNEFAgMBAAECggEAW2BKY0TQbBwft8d8NjIX5am7Maf4wUvJS32Yp4hmxlpQ\n4iI6bqFuxvkC/WUoGZEcvR24RhUbcJ4bt2oIgczhbhZ4/vXC3qs2md6qnlSzpoZ2\n7zcF6IVLOAl3ot+D8neQUVhgtFYrPpkIhpgZoOTRQjLgaJJXssqSfKUJXM7BVLzP\nMUNEQIXLc4mjPQIh8GW/dkUKkVUwbBVsrxuvAg4XdmRKeEXORYZqcungkQ/DTaH2\npNHduvPgtzSZg3S8CCSAyWNyJvlIVsPGpPtk7sqQj+uTpoeCkUhfG7PlWdn/XG2w\nIIX1a9W4QAPlsIL4RG3qmd2GfqUaTHc6cXHPMWZGtQKBgQD6LxBsySlbAanLD5wV\nn66nzqfpBHFrVFfodEF0Bvij0xd0WSwTmPpag5eTUq0rcfT07HYw7iiCuD9sQtQa\nzpwkwQOinwo6x02N2E+lxCtuJGyfeOARQbpxCGitFJj7wh7UMGgMXtA0z7tN/PYY\n2e4hDKJWg2TNDhtuVT/D4Z9o7wKBgQDEAYoU+ARV/cW6RtPBO/ANCW39mCoB41mv\nFioPWLDzcLS2tzRKVEzKBcBQEC+NOGQOsGt245ZtqtAGv4Mdp3/YA/V4uXYMS/WW\nrExFeXU8+IG+ThJpd5bcd4nG0m2x7Hx2R+WJVzuho7fmwbJw/aoYItuW/C0q/w7L\nBshOAPIdSwKBgCfCOPsA0Pisf/5MQcLR+KCkX9zRHvEumzXO2+QDg5oNXunXjgCj\nTA38YadA+VIxLvuJZJMMFhYID9Q1np2P/hJ9NgWu/qIusC19ldLDJR/A3B5PyFQV\nvPpfmrr+zf0ccWfJNY/ZtX7fEGYpcDas04IfDuFuyiMoPcW/+H05quqzAoGBAKYm\nL+iqfPJv1iabV3Eb39cNQUGQtTs4f5OdlDXCFu2lgmrITfkcEKPH0EeOEOEDBj41\nakMzlRaNjx3JRdnjXMm+QVz+yYSO9zWsBFN4K9ttRH4PLChfCXEFm7MAOaBzOOYC\n+B495fyVDZT8aMjDHmarVb1dMuSZpO6RZ0ZIIvSVAoGAHWY5hHjsGI+AdK1J2Ibt\nDKEkHG1e7xHH0eag20IfTNfaJfG3TdvaN03VKoreygFWrXPC5XTXzp4M7PBvlqC2\nOwnOWyVX/zs82eqU9qIHBwh6bW7CpPAqKWJI6a6+u7VJZfjqSEwRCaUlngDzlHbt\n+VODlFvKlg+gL5ravU8aU/s=\n-----END PRIVATE KEY-----\n",
-                "client_email": "firebase-adminsdk-8dg9x@marshtravel-koyo.iam.gserviceaccount.com",
-                "client_id": "117846616436672548219",
-                "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-                "token_uri": "https://oauth2.googleapis.com/token",
-                "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-                "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-8dg9x%40marshtravel-koyo.iam.gserviceaccount.com",
-                "universe_domain": "googleapis.com"
-              }
+  serviceAccount: $FIREBASE_SA
