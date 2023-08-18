@@ -31,6 +31,8 @@ spec:
               value: auth
             - name: RABBIT_MQ_DESTINATION_QUEUE
               value: destination
+            - name: RABBIT_MQ_TRIP_QUEUE
+              value: trip
             - name: JWT_SECRET_KEY
               value: {{ .Values.jwtSecret.secretKey }}
             - name: JWT_REFRESH_KEY
