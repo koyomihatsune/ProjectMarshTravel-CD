@@ -11,6 +11,7 @@ spec:
     metadata:
       labels:
         app: trip
+        date: "{{ now | unixEpoch }}"
     spec:
       imagePullSecrets:
         - name: marshtravel-ghcr-registry
