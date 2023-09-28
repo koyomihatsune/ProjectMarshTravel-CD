@@ -16,3 +16,6 @@ oauth2:
 googleMapsAPIKey: $GOOGLE_MAPS_API_KEY
 firebase:
   serviceAccount: $FIREBASE_SA
+gcloud:
+  storageBucketName: $GCLOUD_STORAGE_BUCKET_NAME
+  serviceAccount: $GCLOUD_SA

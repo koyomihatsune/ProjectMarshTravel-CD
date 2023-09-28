@@ -46,3 +46,7 @@ spec:
               value: {{ .Values.oauth2.clientIdAndroid }}
             - name: OAUTH2_CLIENT_ID_IOS
               value: {{ .Values.oauth2.clientIdIos }}
+            - name: GCLOUD_STORAGE_BUCKET_NAME
+              value: {{ .Values.gcloud.storageBucketName }}
+            - name: GCLOUD_SA
+              value: {{ .Values.gcloud.serviceAccount | toJson | quote }}
