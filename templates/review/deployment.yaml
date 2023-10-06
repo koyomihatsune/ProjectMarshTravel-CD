@@ -1,29 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: trip
+  name: review
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: trip
+      app: review
   template:
     metadata:
       labels:
-        app: trip
+        app: review
         date: "{{ now | unixEpoch }}"
     spec:
       imagePullSecrets:
         - name: marshtravel-ghcr-registry
       containers:
         - name: auth
-          image: ghcr.io/marshtravel/marshtravel-trip:lastest
+          image: ghcr.io/marshtravel/marshtravel-review:lastest
           imagePullPolicy: Always
           ports:
             - containerPort: 3003
           env:
             - name: PORT
-              value: '3003'
+              value: '3004'
             - name: MONGODB_URI
               value: mongodb+srv://{{ .Values.mongodb.auth.username }}:{{ .Values.mongodb.auth.password }}@marshtravel.vv5rzyf.mongodb.net/?retryWrites=true&w=majority
             - name: RABBIT_MQ_URI

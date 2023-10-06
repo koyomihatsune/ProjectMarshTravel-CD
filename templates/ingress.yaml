@@ -38,3 +38,10 @@ spec:
             name: trip
             port:
               number: 3003
+      - path: /review
+        pathType: Prefix
+        backend:
+          service:
+            name: review
+            port:
+              number: 3004
