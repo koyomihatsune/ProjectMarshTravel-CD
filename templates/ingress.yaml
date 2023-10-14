@@ -31,6 +31,13 @@ spec:
             name: destination
             port:
               number: 3002
+      - path: /adm
+        pathType: Prefix
+        backend:
+          service:
+            name: destination
+            port:
+              number: 3002
       - path: /trip
         pathType: Prefix
         backend:
