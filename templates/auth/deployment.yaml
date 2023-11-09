@@ -50,3 +50,9 @@ spec:
               value: {{ .Values.gcloud.storageBucketName }}
             - name: GCLOUD_SA
               value: {{ .Values.gcloud.serviceAccount | toJson | quote }}
+            - name: TWILIO_ACCOUNTSID
+              value: {{ .Values.twilio.accountSid }}
+            - name: TWILIO_AUTHTOKEN
+              value: {{ .Values.twilio.authToken }}
+            - name: TWILIO_VERIFYSID
+              value: {{ .Values.twilio.verifySid }}

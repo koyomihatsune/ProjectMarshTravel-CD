@@ -19,3 +19,8 @@ firebase:
 gcloud:
   storageBucketName: $GCLOUD_STORAGE_BUCKET_NAME
   serviceAccount: $GCLOUD_SA
+twilio:
+  accountSid: $TWILIO_ACCOUNTSID
+  authToken: $TWILIO_AUTHTOKEN
+  verifySid: $TWILIO_VERIFYSID
+  
